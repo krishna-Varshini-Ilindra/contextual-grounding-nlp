@@ -60,23 +60,15 @@ I tested 16 cases across three variables:
 
 ## Key Findings
 
-**Finding 1 — Position matters most.**
+**Finding 1 — Fact position showed a noticeable effect.**
 When the key fact appeared at the START of the document, the model 
-used it 100% of the time. When it appeared at the END, that dropped 
-to 64%. This confirms the "Lost-in-the-Later" effect — the model 
-pays less attention to information at the end of a document.
+used it 100% of the time. When it appeared at the END, the contextual response rate dropped to 64%. In this small experiment, this pattern is consistent with previously reported positional effects in contextual grounding, suggesting that where information appears in a document may influence how reliably the model uses it.
 
-**Finding 2 — Medium documents are the most unreliable.**
-Short documents produced 100% contextual answers. Surprisingly, 
-medium-length documents dropped to 57% — lower than long documents 
-(75%). This suggests document length alone doesn't explain context 
-ignorance — structure and position matter more.
+**Finding 2 — Medium-length documents had the lowest contextual response rate in this experiment.**
+Short documents produced 100% contextual responses, while medium-length documents produced 57% and long documents produced 75%. Because this experiment contains only 16 cases and multiple factors vary across examples, these results are descriptive rather than sufficient to determine whether document length itself caused the difference. A larger controlled experiment would be needed to separate the effects of document length, structure, and fact position.
 
-**Finding 3 — Strongly learned facts resist override.**
-The DNA discovery date (1953) was impossible to override — even 
-when the document explicitly stated 1800, the model answered 1953. 
-This shows that parametric knowledge about well-known scientific 
-facts is deeply embedded and hard to correct through context alone.
+**Finding 3 — Some familiar facts appeared more resistant to counterfactual context.**
+In one tested case, Flan-T5 returned the familiar DNA-discovery date (1953) even though the document provided a counterfactual date of 1800. This observation suggests that fact familiarity may influence whether a model follows conflicting contextual information, but additional examples would be needed to test this hypothesis systematically.
 
 ---
 
