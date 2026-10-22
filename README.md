@@ -50,6 +50,8 @@ I tested 16 cases across three variables:
 | Facts at END | 64% contextual |
 | History topics | 60% contextual (lowest) |
 
+*Note: answers are scored by keyword matching, which may misclassify some cases (e.g. "a planet", "50 degrees"); results should be verified by hand.*
+
 ---
 
 ## Visualization
@@ -60,15 +62,14 @@ I tested 16 cases across three variables:
 
 ## Key Findings
 
-**Finding 1 — Fact position showed a noticeable effect.**
-When the key fact appeared at the START of the document, the model 
-used it 100% of the time. When it appeared at the END, the contextual response rate dropped to 64%. In this small experiment, this pattern is consistent with previously reported positional effects in contextual grounding, suggesting that where information appears in a document may influence how reliably the model uses it.
+**Finding 1 — An apparent position effect, explained by a design flaw.**
+Facts at the START were followed in 4/4 cases and facts at the END in 7/11 (64%). But all 4 failures came from documents that also stated the true fact earlier, so the document contradicted itself. End-position documents without this contradiction were followed 5/5 times. Position and internal contradiction are confounded, so this experiment cannot show a position effect.
 
 **Finding 2 — Medium-length documents had the lowest contextual response rate in this experiment.**
 Short documents produced 100% contextual responses, while medium-length documents produced 57% and long documents produced 75%. Because this experiment contains only 16 cases and multiple factors vary across examples, these results are descriptive rather than sufficient to determine whether document length itself caused the difference. A larger controlled experiment would be needed to separate the effects of document length, structure, and fact position.
 
-**Finding 3 — Some familiar facts appeared more resistant to counterfactual context.**
-In one tested case, Flan-T5 returned the familiar DNA-discovery date (1953) even though the document provided a counterfactual date of 1800. This observation suggests that fact familiarity may influence whether a model follows conflicting contextual information, but additional examples would be needed to test this hypothesis systematically.
+**Finding 3 — The DNA case was not the model ignoring the document.**
+The document states "The structure of DNA was discovered in 1953" and the question asks about the structure, so the model's answer (1953) came from the document itself.
 
 ---
 
