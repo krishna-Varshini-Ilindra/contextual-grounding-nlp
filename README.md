@@ -2,7 +2,7 @@
 
 **Author:** Krishna Varshini Ilindra  
 **Background:** M.S. in Computer Science, University of Bridgeport  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Software Developer  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Software Engineer  
 **Run the notebook:** [Open in Colab](https://colab.research.google.com/drive/141ZqlZ1nzE5xmUqjdTB0HhULQKs59IrY#scrollTo=Qbm3VUM9SjJ1)
 
 ---
